@@ -18,6 +18,12 @@ const utils = {
    * @returns {String} 'LE' or 'BE' depending on system architecture
    * Credit: https://gist.github.com/TooTallNate/4750953
    */
+  debugGPU: false,
+  debug(a) {
+    if (utils.debugGPU) {
+      console.log("gpu.js > " + a);
+    }
+  },
   systemEndianness() {
     return _systemEndianness;
   },
